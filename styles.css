@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+:root {
+    --gainsboro: hsla(240, 1%, 86%, 1);
+    --silver: hsla(280, 3%, 77%, 1);
+    --davys-grey: hsla(210, 4%, 29%, 1);
+    --black-coral: hsla(206, 16%, 35%, 1);
+    --blue-munsell: hsla(192, 73%, 36%, 1);
+}
+
+body {
+    margin: 0;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    min-height: 100vh;
+    background-color: var(--gainsboro);
+    color: var(--davys-grey);
+    text-transform: uppercase;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 30px;
+    background-color: var(--silver);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    justify-items: center;
+    gap: 10px;
+    border: 3px dashed var(--davys-grey);
+    box-shadow: 1px 1px 10px var(--blue-munsell);
+}
+
+header {
+    border-bottom: 3px solid var(--davys-grey);
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: var(--davys-grey);
+    text-shadow: 5px 5px var(--blue-munsell);
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 125px);
+}
+
+.tile {
+    background-color: var(--blue-munsell);
+    height: 125px;
+    border: 1px solid black;
+}
+
+.tile:hover {
+    opacity: 0.8;
+}
+
+.tile svg {
+    font-size: 125px;
+    color: var(--gainsboro);
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch {
+    width: 4rem;
+    background: var(--black-coral);
+    border-radius: 2px;
+}
+
+.switch div {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2px;
+    background: var(--blue-munsell);
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.switch input:checked + div {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.toggleswitch {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: min-content;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggleswitch svg {
+    font-size: 40px;
+    color: var(--davys-grey);
+}

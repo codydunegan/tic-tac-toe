@@ -8,8 +8,44 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="./script.js" defer></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <header>
+            <h1>Tic Tac Toe</h1>
+        </header>
+        <section class="options">
+            <h3>Opponent?</h3>
+            <div class="toggleswitch">
+                <span class="iconify-inline" data-icon="mdi:brain"></span>
+                <label class="switch">
+                    <input id="opponentswitch" type="checkbox" /><div></div>
+                </label>
+                <span class="iconify-inline" data-icon="mdi:account-supervisor"></span>
+            </div>
+        </section>
+        <section class="options">
+            <h3>Game Piece?</h3>
+            <div class="toggleswitch">
+                <span class="iconify-inline" data-icon="mdi:alpha-x-box-outline"></span>
+                <label class="switch">
+                    <input id="gamepieceswitch" type="checkbox" /><div></div>
+                </label>
+                <span class="iconify-inline" data-icon="mdi:alpha-o-box-outline"></span>
+            </div>
+        </section>
+        <section id="gameboard">
+            <div class="tile"></div>
+            <div class="tile"><span class="iconify-inline" data-icon="mdi:alpha-x-box-outline"></span></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"><span class="iconify-inline" data-icon="mdi:alpha-o-box-outline"></span></div>
+        </section>
+    </main>
 </body>
 </html>
